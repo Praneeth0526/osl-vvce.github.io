@@ -40,6 +40,10 @@ const siteMetadata = {
             url: "/members",
         },
         {
+            name: "LOGBOOK",
+            url: "/visitor-logbook",
+        },
+        {
             name: "CONTACT",
             url: "/contact",
         },
@@ -96,7 +100,6 @@ const siteMetadata = {
         api_url: "https://getform.io/f/93b1c53f-0be8-4aa2-ae7c-e16f073c9fc6",
         description: `Hey! Looking for a way to get to us? Contact us using any of the links shared below or just drop by at our place!`,
         mail: "osl@vvce.ac.in",
-        phone: "+91 8095699637",
         address: "VVCE Mysore- 570002",
     },
     disqus: "osl-netlify-app",
