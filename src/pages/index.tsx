@@ -210,7 +210,6 @@ export const query = graphql`
                     api_url
                     description
                     mail
-                    phone
                     address
                 }
                 social {

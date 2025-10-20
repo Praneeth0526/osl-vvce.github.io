@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Send, Mail, Phone, MapPin, Loader } from "react-feather"
+import { Send, Mail, MapPin, Loader } from "react-feather"
 
 import { TextInput, Button } from "./ui"
 
@@ -154,16 +154,6 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
                         </span>
                         <a className="ml-4" href={"mailto:" + data.mail}>
                             {data.mail}
-                        </a>
-                    </li>
-                )}
-                {data.phone && (
-                    <li className="flex items-center mt-4">
-                        <span className="text-secondary icon">
-                            <Phone />
-                        </span>
-                        <a className="ml-4" href={"tel:" + data.phone}>
-                            {data.phone}
                         </a>
                     </li>
                 )}
