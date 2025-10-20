@@ -1,0 +1,557 @@
+/* OSL VVCE Visitor Logbook - Integrated with Main Website Theme *//* OSL VVCE Visitor Logbook - Integrated with Main Website Theme */
+
+
+
+.visitor-logbook-page {.visitor-logbook-page {
+
+    min-height: 100vh;    min-height: 100vh;
+
+    padding: 2rem 0;    padding: 2rem 0;
+
+}}
+
+
+
+.logbook-content-wrapper {.logbook-content-wrapper {
+
+    max-width: 42rem;    max-width: 42rem;
+
+    margin: 0 auto;    margin: 0 auto;
+
+    padding: 0 1rem;    padding: 0 1rem;
+
+}}
+
+
+
+/* Header Section *//* Header Section */
+
+.logbook-header-section {.logbook-header-section {
+
+    text-align: center;    text-align: center;
+
+    margin-bottom: 3rem;    margin-bottom: 3rem;
+
+}}
+
+
+
+.logbook-logo-section {.logbook-logo-section {
+
+    display: flex;    display: flex;
+
+    flex-direction: column;    flex-direction: column;
+
+    align-items: center;    align-items: center;
+
+    gap: 1.5rem;    gap: 1.5rem;
+
+}}
+
+
+
+.logbook-logo {.logbook-logo {
+
+    width: 5rem;    width: 5rem;
+
+    height: 5rem;    height: 5rem;
+
+    object-fit: contain;    object-fit: contain;
+
+}}
+
+
+
+.logbook-title-section {.logbook-title-section {
+
+    display: flex;    display: flex;
+
+    flex-direction: column;    flex-direction: column;
+
+    gap: 0.5rem;    gap: 0.5rem;
+
+}}
+
+
+
+.logbook-page-title {.logbook-page-title {
+
+    font-size: 2.25rem;    font-size: 2.25rem;
+
+    font-weight: 700;    font-weight: 700;
+
+    color: var(--text-color);    color: var(--text-color);
+
+}}
+
+
+
+.logbook-subtitle {.logbook-subtitle {
+
+    font-size: 1.125rem;    font-size: 1.125rem;
+
+    color: var(--text-color);    color: var(--text-color);
+
+    opacity: 0.75;    opacity: 0.75;
+
+}}
+
+
+
+/* Form Container *//* Form Container */
+
+.logbook-form-container {.logbook-form-container {
+
+    background: var(--bg-color);    background: var(--card-bg);
+
+    border-radius: 1rem;    border: 1px solid var(--border-color);
+
+    padding: 2rem;    border-radius: 1rem;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);    overflow: hidden;
+
+}    position: relative;
+
+}
+
+.visitor-form {
+
+    display: flex;.logbook-form-container::before {
+
+    flex-direction: column;    content: '';
+
+    gap: 1.5rem;    position: absolute;
+
+}    top: 0;
+
+    left: 0;
+
+/* Form Rows */    right: 0;
+
+.form-row {    height: 4px;
+
+    display: flex;    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+
+    flex-direction: column;}
+
+    gap: 1rem;
+
+}/* Form Styles */
+
+.visitor-form {
+
+.form-row.two-columns {    padding: 2rem;
+
+    display: grid;    position: relative;
+
+    grid-template-columns: 1fr 1fr;}
+
+    gap: 1rem;
+
+}/* Form Rows */
+
+.form-row {
+
+@media (max-width: 640px) {    margin-bottom: 1.5rem;
+
+    .form-row.two-columns {}
+
+        grid-template-columns: 1fr;
+
+    }.form-row.two-columns {
+
+}    display: grid;
+
+    grid-template-columns: 1fr;
+
+/* Input Groups */    gap: 1rem;
+
+.input-group {}
+
+    display: flex;
+
+    flex-direction: column;@media (min-width: 768px) {
+
+    gap: 0.5rem;    .form-row.two-columns {
+
+}        grid-template-columns: 1fr 1fr;
+
+    }
+
+.input-group label {}
+
+    display: flex;
+
+    align-items: center;.input-group {
+
+    gap: 0.5rem;    display: flex;
+
+    font-weight: 500;    flex-direction: column;
+
+    color: var(--text-color);    gap: 0.5rem;
+
+    font-size: 0.95rem;}
+
+}
+
+/* Input Labels */
+
+.input-group label i {.visitor-form label {
+
+    color: var(--primary-color);    display: flex;
+
+    width: 1rem;    align-items: center;
+
+}    gap: 0.5rem;
+
+    font-size: 0.875rem;
+
+/* Form Inputs */    font-weight: 500;
+
+.input-group input,    color: var(--text-color);
+
+.input-group textarea {    opacity: 0.75;
+
+    padding: 0.75rem;    text-transform: uppercase;
+
+    border: 2px solid rgba(255, 255, 255, 0.1);    letter-spacing: 0.05em;
+
+    border-radius: 0.5rem;}
+
+    background: var(--bg-secondary);
+
+    color: var(--text-color);.visitor-form label i {
+
+    font-size: 1rem;    color: var(--primary-color);
+
+    transition: all 0.2s ease;    width: 1rem;
+
+    font-family: inherit;    text-align: center;
+
+}}
+
+
+
+.input-group input:focus,/* Input Fields */
+
+.input-group textarea:focus {.visitor-form input[type="text"],
+
+    outline: none;.visitor-form input[type="time"],
+
+    border-color: var(--primary-color);.visitor-form textarea {
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);    width: 100%;
+
+}    padding: 0.75rem 1rem;
+
+    background: var(--input-bg);
+
+.input-group input::placeholder,    border: 1px solid var(--border-color);
+
+.input-group textarea::placeholder {    border-radius: 0.5rem;
+
+    color: var(--text-color);    color: var(--text-color);
+
+    opacity: 0.6;    font-size: 1rem;
+
+}    transition: all 0.2s ease;
+
+    outline: none;
+
+.input-group textarea {}
+
+    resize: vertical;
+
+    min-height: 5rem;.visitor-form input::placeholder,
+
+    line-height: 1.6;.visitor-form textarea::placeholder {
+
+}    color: var(--text-color);
+
+    opacity: 0.5;
+
+/* Form Actions */    font-style: italic;
+
+.form-actions {}
+
+    padding-top: 1.5rem;
+
+    text-align: center;.visitor-form input:focus,
+
+}.visitor-form textarea:focus {
+
+    border-color: var(--primary-color);
+
+/* Submit Button */    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+
+.submit-btn {    transform: translateY(-1px);
+
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);}
+
+    color: white;
+
+    border: none;/* Textarea Specific */
+
+    border-radius: 0.5rem;.visitor-form textarea {
+
+    padding: 0.75rem 2rem;    resize: vertical;
+
+    font-size: 1.1rem;    min-height: 5rem;
+
+    font-weight: 600;    line-height: 1.6;
+
+    cursor: pointer;}
+
+    transition: all 0.2s ease;
+
+    min-width: 12rem;/* Form Actions */
+
+    text-transform: uppercase;.form-actions {
+
+    letter-spacing: 0.05em;    padding-top: 1.5rem;
+
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);    text-align: center;
+
+}}
+
+
+
+.submit-btn:hover {/* Submit Button */
+
+    transform: translateY(-2px);.submit-btn {
+
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.3);    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+
+}    color: white;
+
+    border: none;
+
+.submit-btn:active {    border-radius: 0.5rem;
+
+    transform: translateY(0);    padding: 0.75rem 2rem;
+
+}    font-size: 1.1rem;
+
+    font-weight: 600;
+
+.submit-btn:disabled {    cursor: pointer;
+
+    opacity: 0.6;    transition: all 0.2s ease;
+
+    cursor: not-allowed;    min-width: 12rem;
+
+    transform: none;    text-transform: uppercase;
+
+}    letter-spacing: 0.05em;
+
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
+
+.submit-btn i {}
+
+    margin-right: 0.5rem;
+
+}.submit-btn:hover {
+
+    transform: translateY(-2px);
+
+/* Submit Message */    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.3);
+
+.submit-message {}
+
+    margin-top: 1rem;
+
+    padding: 0.75rem 1rem;.submit-btn:active {
+
+    border-radius: 0.5rem;    transform: translateY(0);
+
+    font-weight: 500;}
+
+    text-align: center;
+
+}.submit-btn:disabled {
+
+    opacity: 0.6;
+
+.submit-message.success {    cursor: not-allowed;
+
+    background-color: #d1fae5;    transform: none;
+
+    color: #065f46;}
+
+    border: 1px solid #a7f3d0;
+
+}.submit-btn i {
+
+    margin-right: 0.5rem;
+
+.submit-message.error {}
+
+    background-color: #fee2e2;
+
+    color: #991b1b;/* Submit Message */
+
+    border: 1px solid #fca5a5;.submit-message {
+
+}    margin-top: 1rem;
+
+    padding: 0.75rem 1rem;
+
+/* CSS Custom Properties */    border-radius: 0.5rem;
+
+:root {    font-weight: 500;
+
+    --primary-color: #3b82f6;    text-align: center;
+
+    --secondary-color: #8b5cf6;}
+
+    --text-color: #374151;
+
+    --bg-color: #ffffff;.submit-message.success {
+
+    --bg-secondary: #f9fafb;    background-color: #d1fae5;
+
+}    color: #065f46;
+
+    border: 1px solid #a7f3d0;
+
+[data-theme="dark"] {}
+
+    --primary-color: #60a5fa;
+
+    --secondary-color: #a78bfa;.submit-message.error {
+
+    --text-color: #f3f4f6;    background-color: #fee2e2;
+
+    --bg-color: #1f2937;    color: #991b1b;
+
+    --bg-secondary: #374151;    border: 1px solid #fca5a5;
+
+}}
+
+
+
+/* Responsive Design *//* CSS Custom Properties */
+
+@media (max-width: 768px) {:root {
+
+    .visitor-logbook-page {    --primary-color: #3b82f6;
+
+        padding: 1rem 0;    --secondary-color: #8b5cf6;
+
+    }    --primary-rgb: 59, 130, 246;
+
+        --text-color: var(--text-primary, #1f2937);
+
+    .logbook-content-wrapper {    --card-bg: var(--card-bg-color, #ffffff);
+
+        padding: 0 0.5rem;    --input-bg: var(--input-bg-color, #f9fafb);
+
+    }    --border-color: var(--border-color-primary, #e5e7eb);
+
+    }
+
+    .logbook-form-container {
+
+        padding: 1.5rem;/* Dark theme support */
+
+        border-radius: 0.75rem;@media (prefers-color-scheme: dark) {
+
+    }    :root {
+
+            --text-color: #f9fafb;
+
+    .logbook-page-title {        --card-bg: #1f2937;
+
+        font-size: 1.875rem;        --input-bg: #374151;
+
+    }        --border-color: #4b5563;
+
+        }
+
+    .logbook-subtitle {}
+
+        font-size: 1rem;
+
+    }/* Responsive Design */
+
+    @media (max-width: 768px) {
+
+    .submit-btn {    .logbook-content-wrapper {
+
+        width: 100%;        padding: 0 1rem;
+
+        min-width: auto;    }
+
+    }    
+
+}    .logbook-logo {
+
+        width: 4rem;
+
+@media (max-width: 480px) {        height: 4rem;
+
+    .logbook-logo {    }
+
+        width: 4rem;    
+
+        height: 4rem;    .logbook-page-title {
+
+    }        font-size: 1.875rem;
+
+        }
+
+    .logbook-page-title {    
+
+        font-size: 1.5rem;    .visitor-form {
+
+    }        padding: 1.5rem;
+
+        }
+
+    .logbook-form-container {    
+
+        padding: 1rem;    .form-row.two-columns {
+
+    }        grid-template-columns: 1fr;
+
+            gap: 1rem;
+
+    .visitor-form {    }
+
+        gap: 1rem;    
+
+    }    .submit-btn {
+
+            width: 100%;
+
+    .form-row {        min-width: 0;
+
+        gap: 0.75rem;    }
+
+    }}
+
+}
+@media (max-width: 480px) {
+    .logbook-logo {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .logbook-page-title {
+        font-size: 1.5rem;
+    }
+    
+    .visitor-form {
+        padding: 1rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
