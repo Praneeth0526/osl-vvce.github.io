@@ -39,7 +39,7 @@ Anybody! Think of this as a playground where no matter what your skill level, yo
 
 ## What is this project?
 
-OSL Website https://oslvvce.com
+OSL Website https://osl-vvce.netlify.app
 
 ## Features
 
