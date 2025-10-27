@@ -44,6 +44,10 @@ const siteMetadata = {
             url: "/visitor-logbook",
         },
         {
+            name: "SUGGESTIONS",
+            url: "/suggestions",
+        },
+        {
             name: "CONTACT",
             url: "/contact",
         },

@@ -167,7 +167,7 @@ const suggestions: React.FC<suggestionsProps> = ({ location }) => {
                                     <textarea
                                         id="category"
                                         name="category"
-                                        rows={3}
+                                        rows={1}
                                         placeholder="Describe the type of your message..."
                                         value={formData.category}
                                         onChange={handleInputChange}
@@ -180,7 +180,7 @@ const suggestions: React.FC<suggestionsProps> = ({ location }) => {
                                 <div className="input-group">
                                     <label htmlFor="message">
                                         <i className="fas fa-tasks"></i>
-                                        Progress of Work
+                                        Message
                                     </label>
                                     <textarea
                                         id="message"
