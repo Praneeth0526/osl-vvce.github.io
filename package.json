@@ -6,12 +6,12 @@
   "author": "OSL@VVCE <osl@vvce.ac.in>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby build",
-    "develop": "NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby develop",
+    "build": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby build",
+    "develop": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby serve",
-    "clean": "NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby clean",
+    "serve": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby serve",
+    "clean": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
@@ -49,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
     "autoprefixer": "^9.8.0",
+    "cross-env": "^7.0.3",
     "cssnano": "^4.1.10",
     "prettier": "^1.19.1",
     "source-map-support": "^0.5.17",
