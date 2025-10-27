@@ -218,24 +218,19 @@
     --border-color: var(--border-color-primary, #e5e7eb);
 }
 
-/* Dark theme support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #f9fafb;
-        --card-bg: #1f2937;
-        --input-bg: #374151;
-        --border-color: #4b5563;
-    }
+/* Theme Support */
+.theme-light {
+    --text-color: var(--color-default, #1f2937);
+    --card-bg: var(--bg, #ffffff);
+    --input-bg: var(--bg-alt, #f9fafb);
+    --border-color: var(--border-color-default, #e5e7eb);
 }
 
-/* Light theme support */
-@media (prefers-color-scheme: light) {
-    :root {
-        --text-color: #1f2937;
-        --card-bg: #1f2937;
-        --input-bg: #374151;
-        --border-color: #4b5563;
-    }
+.theme-dark {
+    --text-color: var(--color-default, #f9fafb);
+    --card-bg: var(--bg, #1f2937);
+    --input-bg: var(--bg-alt, #374151);
+    --border-color: var(--border-color-default, #4b5563);
 }
 
 /* Responsive Design */
