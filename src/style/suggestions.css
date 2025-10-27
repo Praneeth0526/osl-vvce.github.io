@@ -1,0 +1,291 @@
+/* OSL VVCE Suggestions and Queries Page - Integrated with Main Website Theme 1*/
+
+.Suggestions-page {
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.Suggestions-content-wrapper {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Section */
+.Suggestions-header-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.Suggestions-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.Suggestions-logo {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.Suggestions-title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Suggestions-page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.Suggestions-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-color);
+    opacity: 0.75;
+}
+
+/* Form Container */
+.Suggestions-form-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+}
+
+.Suggestions-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+/* Form Styles */
+.Suggestions-form {
+    padding: 2rem;
+    position: relative;
+}
+
+/* Form Rows */
+.form-row {
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Input Labels */
+.Suggestions-form label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.Suggestions-form label i {
+    color: var(--primary-color);
+    width: 1rem;
+    text-align: center;
+}
+
+/* Input Fields */
+.Suggestions-form input[type="text"],
+.Suggestions-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.Suggestions-form input::placeholder,
+.Suggestions-form textarea::placeholder {
+    color: var(--text-color);
+    opacity: 0.5;
+    font-style: italic;
+}
+
+.Suggestions-form input:focus,
+.Suggestions-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+    transform: translateY(-1px);
+}
+
+/* Textarea Specific */
+.Suggestions-form textarea {
+    resize: vertical;
+    min-height: 5rem;
+    line-height: 1.6;
+}
+
+/* Form Actions */
+.form-actions {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 12rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Submit Message */
+.submit-message {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.submit-message.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.submit-message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+/* CSS Custom Properties */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #8b5cf6;
+    --primary-rgb: 59, 130, 246;
+    --text-color: var(--text-primary, #1f2937);
+    --card-bg: var(--card-bg-color, #ffffff);
+    --input-bg: var(--input-bg-color, #f9fafb);
+    --border-color: var(--border-color-primary, #e5e7eb);
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f9fafb;
+        --card-bg: #1f2937;
+        --input-bg: #374151;
+        --border-color: #4b5563;
+    }
+}
+
+/* Light theme support */
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: #1f2937;
+        --card-bg: #1f2937;
+        --input-bg: #374151;
+        --border-color: #4b5563;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Suggestions-content-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .Suggestions-logo {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .Suggestions-page-title {
+        font-size: 1.875rem;
+    }
+    
+    .Suggestions-form {
+        padding: 1.5rem;
+    }
+    
+    .form-row.two-columns {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .Suggestions-logo {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .Suggestions-page-title {
+        font-size: 1.5rem;
+    }
+    
+    .Suggestions-form {
+        padding: 1rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
