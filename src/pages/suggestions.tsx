@@ -58,21 +58,35 @@ const suggestions: React.FC<suggestionsProps> = ({ location }) => {
         }
 
         try {
-            const { error } = await supabase.from("Suggestions").insert([
+            // Validate required fields
+            if (!formData.fullName.trim()) {
+                setSubmitMessage("Please enter your full name")
+                setSubmitting(false)
+                return
+            }
+            
+            if (!formData.message.trim()) {
+                setSubmitMessage("Please enter your message")
+                setSubmitting(false)
+                return
+            }
+
+            // Insert into suggestions table
+            const { error } = await supabase.from("suggestions").insert([
                 {
-                    full_name: formData.fullName,
-                    email: formData.email,
-                    category: formData.category,
-                    message: formData.message,
+                    name: formData.fullName,
+                    email: formData.email || null, // Allow null for anonymous suggestions
+                    message: `Category: ${formData.category}\n\nMessage: ${formData.message}`,
                 },
             ])
+            
             if (error) throw error
 
-            setSubmitMessage("Entry submitted successfully!")
+            setSubmitMessage("Your suggestion has been submitted successfully!")
             setFormData({ fullName: "", email: "", category: "", message: "" })
-        } catch (error) {
+        } catch (error: any) {
             console.error("Error:", error)
-            setSubmitMessage("Submission failed: " + error.message)
+            setSubmitMessage("Submission failed: " + (error.message || "Unknown error"))
         } finally {
             setSubmitting(false)
         }
@@ -144,16 +158,15 @@ const suggestions: React.FC<suggestionsProps> = ({ location }) => {
                                 <div className="input-group">
                                     <label htmlFor="email">
                                         <i className="fas fa-envelope"></i>
-                                        Email ID
+                                        Email ID (Optional)
                                     </label>
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
-                                        placeholder="Enter your Email ID"
+                                        placeholder="Enter your Email ID (optional)"
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        required
                                     />
                                 </div>
                             </div>
