@@ -1,55 +1,55 @@
-/* OSL VVCE Visitor-Logbook - Integrated with Main Website Theme 1*/
+/* OSL VVCE Suggestions and Queries Page - Integrated with Main Website Theme 1*/
 
-.visitor-logbook-page {
+.Suggestions-page {
     min-height: 100vh;
     padding: 2rem 0;
 }
 
-.logbook-content-wrapper {
+.Suggestions-content-wrapper {
     max-width: 42rem;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
 /* Header Section */
-.logbook-header-section {
+.Suggestions-header-section {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.logbook-logo-section {
+.Suggestions-logo-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
 }
 
-.logbook-logo {
+.Suggestions-logo {
     width: 5rem;
     height: 5rem;
     object-fit: contain;
 }
 
-.logbook-title-section {
+.Suggestions-title-section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.logbook-page-title {
+.Suggestions-page-title {
     font-size: 2.25rem;
     font-weight: 700;
     color: var(--text-color);
 }
 
-.logbook-subtitle {
+.Suggestions-subtitle {
     font-size: 1.125rem;
     color: var(--text-color);
     opacity: 0.75;
 }
 
 /* Form Container */
-.logbook-form-container {
+.Suggestions-form-container {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 1rem;
@@ -58,7 +58,7 @@
     position: relative;
 }
 
-.logbook-form-container::before {
+.Suggestions-form-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -69,7 +69,7 @@
 }
 
 /* Form Styles */
-.visitor-form {
+.Suggestions-form {
     padding: 2rem;
     position: relative;
 }
@@ -79,17 +79,9 @@
     margin-bottom: 1.5rem;
 }
 
-.form-row.two-columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
 
-@media (min-width: 768px) {
-    .form-row.two-columns {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+
+
 
 .input-group {
     display: flex;
@@ -98,7 +90,7 @@
 }
 
 /* Input Labels */
-.visitor-form label {
+.Suggestions-form label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -110,16 +102,16 @@
     letter-spacing: 0.05em;
 }
 
-.visitor-form label i {
+.Suggestions-form label i {
     color: var(--primary-color);
     width: 1rem;
     text-align: center;
 }
 
 /* Input Fields */
-.visitor-form input[type="text"],
-.visitor-form input[type="time"],
-.visitor-form textarea {
+.Suggestions-form input[type="text"],
+.Suggestions-form input[type="email"],
+.Suggestions-form textarea {
     width: 100%;
     padding: 0.75rem 1rem;
     background: var(--input-bg);
@@ -131,22 +123,22 @@
     outline: none;
 }
 
-.visitor-form input::placeholder,
-.visitor-form textarea::placeholder {
+.Suggestions-form input::placeholder,
+.Suggestions-form textarea::placeholder {
     color: var(--text-color);
     opacity: 0.5;
     font-style: italic;
 }
 
-.visitor-form input:focus,
-.visitor-form textarea:focus {
+.Suggestions-form input:focus,
+.Suggestions-form textarea:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
     transform: translateY(-1px);
 }
 
 /* Textarea Specific */
-.visitor-form textarea {
+.Suggestions-form textarea {
     resize: vertical;
     min-height: 5rem;
     line-height: 1.6;
@@ -243,20 +235,20 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .logbook-content-wrapper {
+    .Suggestions-content-wrapper {
         padding: 0 1rem;
     }
     
-    .logbook-logo {
+    .Suggestions-logo {
         width: 4rem;
         height: 4rem;
     }
     
-    .logbook-page-title {
+    .Suggestions-page-title {
         font-size: 1.875rem;
     }
     
-    .visitor-form {
+    .Suggestions-form {
         padding: 1.5rem;
     }
     
@@ -272,16 +264,16 @@
 }
 
 @media (max-width: 480px) {
-    .logbook-logo {
+    .Suggestions-logo {
         width: 3rem;
         height: 3rem;
     }
     
-    .logbook-page-title {
+    .Suggestions-page-title {
         font-size: 1.5rem;
     }
     
-    .visitor-form {
+    .Suggestions-form {
         padding: 1rem;
     }
 }
