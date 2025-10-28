@@ -47,10 +47,6 @@ const siteMetadata = {
             name: "SUGGESTIONS",
             url: "/suggestions",
         },
-        {
-            name: "CONTACT",
-            url: "/contact",
-        },
     ],
     footerLinks: [
         {
@@ -63,16 +59,6 @@ const siteMetadata = {
         },
     ],
     social: [
-        {
-            name: "Facebook",
-            icon: "/images/facebook.svg",
-            url: "https://www.facebook.com/oslvvce",
-        },
-        {
-            name: "Twitter",
-            icon: "/images/twitter.svg",
-            url: "https://twitter.com/osl_vvce",
-        },
         {
             name: "Instagram",
             icon: "/images/instagram.svg",
