@@ -39,7 +39,7 @@ Anybody! Think of this as a playground where no matter what your skill level, yo
 
 ## What is this project?
 
-OSL Website https://oslvvce.com
+OSL Website https://osl-vvce.netlify.app
 
 ## Features
 
@@ -73,7 +73,7 @@ Contact information such as email, linkedin, github etc.
 
 ## Useful Information
 
-**Website:** https://oslvvce.com <br>
+**Website:** https://osl-vvce.netlify.app<br>
 **Repo:** https://github.com/osl-vvce/osl-vvce.github.io <br>
 **Tech:** HTML initially, but up to the community <br>
 **Theme:** Light and Elegant
